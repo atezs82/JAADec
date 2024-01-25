@@ -6,7 +6,7 @@ version '0.8.6'
 sourceCompatibility = 17
 
 jar {
-    baseName = project.name
+    archiveBaseName = project.name
     manifest {
         attributes 'Manifest-Version' : '1.0'
         attributes 'Implementation-Version': version
@@ -15,7 +15,7 @@ jar {
 }
 
 task sourcesJar(type: Jar) {
-    classifier = 'sources'
+    archiveClassifier = 'sources'
     from sourceSets.main.allSource
 }
 
